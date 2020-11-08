@@ -94,6 +94,10 @@ body {
   margin-bottom: var(--base-space);
 }
 
+.invisible {
+  display: none;
+}
+
 .item__thumbnail {
   width: var(--size-thumbnail);
   height: var(--size-thumbnail);
