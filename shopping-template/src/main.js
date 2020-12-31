@@ -21,7 +21,7 @@ function createHTMLString(item) {
 function setEventListener(items) {
   const logo = document.querySelector(".logo");
   const buttons = document.querySelector(".buttons");
-  logo.addEventListener("click", () => displayAllItems(items));
+  logo.addEventListener("click", (event) => displayAllItems(items));
   buttons.addEventListener("click", (event) => onButtonClick(event, items));
 }
 
@@ -37,7 +37,7 @@ function updateItem(key, value, items) {
   // console.log(listItems);
   items.forEach((item, index) => {
     if (item[key] === value) {
-      listItems.classList.remove("invisible");
+      listItems[index].classList.remove("invisible");
     } else {
       listItems[index].classList.add("invisible");
     }
